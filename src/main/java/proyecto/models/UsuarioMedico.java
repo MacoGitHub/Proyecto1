@@ -1,16 +1,14 @@
 package proyecto.models;
 
-public class UsuarioMedico extends Usuario{
+public class UsuarioMedico implements Usuario{
     private String speciality;
     private String workingArea;
     // ---------------------------------------------------------------------------------------------------------------------
     public UsuarioMedico() {
-        super();
         this.speciality = "";
         this.workingArea = "";
     }
     public UsuarioMedico(String speciality, String workingArea, String id, String username, String fullName, String email, String phoneNumber, String password, String homeAddress) {
-        super(id, username, fullName, email, phoneNumber, password, homeAddress);
         this.speciality = speciality;
         this.workingArea = workingArea;
     }

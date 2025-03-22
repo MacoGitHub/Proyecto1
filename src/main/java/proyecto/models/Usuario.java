@@ -1,64 +1,47 @@
 package proyecto.models;
 
-public class Usuario {
-    private String id;
-    private String username;
-    private String fullName;
-    private String email;
-    private String phoneNumber;
-    private String password;
-    private String homeAddress;
-// ---------------------------------------------------------------------------------------------------------------------
-    public Usuario() {this("", "", "", "", "" , "", ""); }
-    public Usuario(String id, String username, String fullName, String email, String phoneNumber, String password, String homeAddress) {
-        this.id = id;
-        this.username = username;
-        this.fullName = fullName;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.password = password;
-        this.homeAddress = homeAddress;
+public interface Usuario {
+    String id = "";
+    String username = "";
+    String fullName = "";
+    String email = "";
+    String phoneNumber = "";
+    String password = "";
+    String homeAddress = "";
+    // ---------------------------------------------------------------------------------------------------------------------
+    default void setId(String id) {
     }
-    public void setId(String id) {
-        this.id = id;
-    }
-    public String getId() {
+    default String getId() {
         return id;
     }
-    public void setUsername(String username) {
-        this.username = username;
+    default void setUsername(String username) {
     }
-    public String getUsername() {
+    default String getUsername() {
         return username;
     }
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    default void setFullName(String fullName) {
     }
-    public String getFullName() {
+    default String getFullName() {
         return fullName;
     }
-    public void setEmail(String email) {
-        this.email = email;
+    default void setEmail(String email) {
     }
-    public String getEmail() {
+    default String getEmail() {
         return email;
     }
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    default void setPhoneNumber(String phoneNumber) {
     }
-    public String getPhoneNumber() {
+    default String getPhoneNumber() {
         return phoneNumber;
     }
-    public void setPassword(String password) {
-        this.password = password;
+    default void setPassword(String password) {
     }
-    public String getPassword() {
+    default String getPassword() {
         return password;
     }
-    public void setHomeAddress(String homeAddress) {
-        this.homeAddress = homeAddress;
+    default void setHomeAddress(String homeAddress) {
     }
-    public String getHomeAddress() {
+    default String getHomeAddress() {
         return homeAddress;
     }
 }
