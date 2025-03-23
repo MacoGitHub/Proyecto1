@@ -20,16 +20,22 @@
 </header>
 <section class="formMedico" >
     <h1 th:if="${mensaje}" th:text="${mensaje}"></h1>
-    <form method="POST" action="/registrarMedico">
-        <label for="nombreCompleto">Nombre completo:</label>
-        <input type="text" id="nombreCompleto" name="nombreCompleto" required>
-        <label for="nombreUsuario">Nombre usuario:</label>
-        <input type="text" id="nombreUsuario" name="nombreUsuario" required>
-        <label for="correoElectronico">Correo electronico:</label>
-        <input type="email" id="correoElectronico" name="correoElectronico" required>
-        <label for="password">Contrasena:</label>
+    <form method="POST" action="/registrarUsuario">
+        <label for="id">Cedula:</label>
+        <input type="text" id="id" name="id" required>
+        <label for="fullName">Nombre completo:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <label for="username">Nombre usuario:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Correo electronico:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="homeAddress">Direccion:</label>
+        <input type="text" id="homeAddress" name="homeAddress" required>
+        <label for="phoneNumber">Telefono:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required>
+        <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password" required>
-        <label for="confirmpassword">Confirme su contraseña</label>
+        <label for="confirmpassword">Confirme su contraseña:</label>
         <input type="password" id="confirmpassword" name="confirmpassword" required>
 
         <input type="submit" value="Registrar">
@@ -38,7 +44,6 @@
 <footer class="logosRedes">
     <div>Total Soft Inc.</div>
     <div >Medical Appointments</div>
-    </form>
     <h6><span>&copy</span>2019 Tsf Inc</h6>
 </footer>
 </body>
