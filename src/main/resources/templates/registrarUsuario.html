@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Medico</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <div class="logo">Medical Appointments</div>
+    <div class="contact">+506 5467 0937</div>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a> </li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="formMedico" >
+    <h1 th:if="${mensaje}" th:text="${mensaje}"></h1>
+    <form method="POST" action="/registrarMedico">
+        <label for="nombreCompleto">Nombre completo:</label>
+        <input type="text" id="nombreCompleto" name="nombreCompleto" required>
+        <label for="nombreUsuario">Nombre usuario:</label>
+        <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+        <label for="correoElectronico">Correo electronico:</label>
+        <input type="email" id="correoElectronico" name="correoElectronico" required>
+        <label for="password">Contrasena:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="confirmpassword">Confirme su contraseña</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" required>
+
+        <input type="submit" value="Registrar">
+    </form>
+</section>
+<footer class="logosRedes">
+    <div>Total Soft Inc.</div>
+    <div >Medical Appointments</div>
+    </form>
+    <h6><span>&copy</span>2019 Tsf Inc</h6>
+</footer>
+</body>
+</html>

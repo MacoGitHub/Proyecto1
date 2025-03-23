@@ -36,3 +36,35 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+.logosRedes{
+    text-align: center;
+    color: #007bff;
+}
+
+.formMedico{
+    margin-top: 50px;
+}
+.formMedico h1{
+    text-align: center;
+}
+.formMedico form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.formMedico input{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+
+.loignBtn input{
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px auto;
+}
