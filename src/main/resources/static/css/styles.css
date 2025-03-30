@@ -8,7 +8,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #007bff;
+    background-color: lightskyblue;
     color: white;
 }
 
@@ -67,4 +67,14 @@ nav ul li a:hover {
     flex-direction: column;
     padding: 10px;
     margin: 10px auto;
+}
+
+footer {
+    color: lightskyblue;
+    background: lightskyblue;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
