@@ -1,47 +1,60 @@
 package proyecto.models;
 
-public interface Usuario {
-    String id = "";
-    String username = "";
-    String fullName = "";
-    String email = "";
-    String phoneNumber = "";
-    String password = "";
-    String homeAddress = "";
-    // ---------------------------------------------------------------------------------------------------------------------
-    default void setId(String id) {
+import jakarta.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo_usuario", discriminatorType = DiscriminatorType.STRING)
+public abstract class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String userId;
+    private String fullName;
+    private String email;
+    private String phoneNumber;
+    private String password;
+// ---------------------------------------------------------------------------------------------------------------------
+    public Usuario(){}
+    public Usuario(String userId, String fullName, String email, String phoneNumber, String password) {
+        this.userId = userId;
+        this.fullName = fullName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
     }
-    default String getId() {
+    public Long getId() {
         return id;
     }
-    default void setUsername(String username) {
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
-    default String getUsername() {
-        return username;
+    public String getUserId() {
+        return userId;
     }
-    default void setFullName(String fullName) {
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
-    default String getFullName() {
+    public String getFullName() {
         return fullName;
     }
-    default void setEmail(String email) {
+    public void setEmail(String email) {
+        this.email = email;
     }
-    default String getEmail() {
+    public String getEmail() {
         return email;
     }
-    default void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
-    default String getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
-    default void setPassword(String password) {
+    public void setPassword(String password) {
+        this.password = password;
     }
-    default String getPassword() {
+    public String getPassword() {
         return password;
-    }
-    default void setHomeAddress(String homeAddress) {
-    }
-    default String getHomeAddress() {
-        return homeAddress;
     }
 }

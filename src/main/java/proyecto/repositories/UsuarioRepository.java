@@ -1,14 +1,10 @@
 package proyecto.repositories;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import proyecto.models.Usuario;
-import java.util.List;
-import java.util.ArrayList;
 
 @Repository
-public class UsuarioRepository {
-    private final List<Usuario> usuarios;
-    public UsuarioRepository() {
-        usuarios = new ArrayList<>();
-    }
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+    Usuario findByUserIdAndPassword(String userId, String password);
 }
