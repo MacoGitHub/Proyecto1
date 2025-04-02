@@ -1,59 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Registrar Medico</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-    <header>
-        <div class="logo">Medical Appointments</div>
-        <div class="contact">+506 5467 0937</div>
-        <nav>
-            <ul>
-                <li><a href="/">Inicio</a> </li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/search">Search</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="formMedico" >
-        <h1 th:if="${mensaje}" th:text="${mensaje}"></h1>
-        <div class="container">
-            <div class="login-box">
-                <form method="POST" action="/registrarMedico">
-                    <label for="id">Cedula:</label>
-                    <input type="text" id="id" name="id" required>
-                    <label for="fullName">Nombre completo:</label>
-                    <input type="text" id="fullName" name="fullName" required>
-                    <label for="username">Nombre usuario:</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="email">Correo electronico:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="homeAddress">Direccion:</label>
-                    <input type="text" id="homeAddress" name="homeAddress" required>
-                    <label for="phoneNumber">Telefono:</label>
-                    <input type="text" id="phoneNumber" name="phoneNumber" required>
-                    <label for="speciality">Especialidad:</label>
-                    <input type="text" id="speciality" name="speciality" required>
-                    <label for="workingArea">Area de trabajo que desempeña:</label>
-                    <input type="text" id="workingArea" name="workingArea" required>
-                    <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" required>
-                    <label for="confirmpassword">Confirme su contraseña:</label>
-                    <input type="password" id="confirmpassword" name="confirmpassword" required>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
 
-                    <input type="submit" value="Registrar">
-                </form>
-            </div>
+<section layout:fragment="content" class="formMedico" >
+    <h1 th:if="${mensaje}" th:text="${mensaje}"></h1>
+    <div class="container">
+        <div class="login-box">
+            <form method="POST" action="/registrarMedico">
+                <label for="id">Cedula:</label>
+                <input type="text" id="id" name="id" required>
+                <label for="fullName">Nombre completo:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <label for="username">Nombre usuario:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Correo electronico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="homeAddress">Direccion:</label>
+                <input type="text" id="homeAddress" name="homeAddress" required>
+                <label for="phoneNumber">Telefono:</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" required>
+                <label for="speciality">Especialidad:</label>
+                <input type="text" id="speciality" name="speciality" required>
+                <label for="workingArea">Area de trabajo que desempeña:</label>
+                <input type="text" id="workingArea" name="workingArea" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirmpassword">Confirme su contraseña:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" required>
+
+                <input type="submit" value="Registrar">
+            </form>
         </div>
+    </div>
+</section>
 
-    </section>
-    <footer class="logosRedes">
-        <div>Total Soft Inc.</div>
-        <div >Medical Appointments</div>
-        <h6><span>&copy</span>2019 Tsf Inc</h6>
-    </footer>
-</body>
 </html>

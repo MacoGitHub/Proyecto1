@@ -1,24 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Inicio de sesión</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-    <header>
-        <div class="logo">Medical Appointments</div>
-        <div class="contact">+506 5467 0937</div>
-        <nav>
-            <ul>
-                <li><a href="/">Inicio</a> </li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/search">Search</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
 
+<section layout:fragment="content">
     <div class="container">
         <div class="login-box">
             <div class="container2">
@@ -35,11 +21,5 @@
             </div>
         </div>
     </div>
-
-    <footer class="logosRedes">
-        <div>Total Soft Inc.</div>
-        <div >Medical Appointments</div>
-        <h6><span>&copy</span>2019 Tsf Inc</h6>
-    </footer>
-</body>
+</section>
 </html>

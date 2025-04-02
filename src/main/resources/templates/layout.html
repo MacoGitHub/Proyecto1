@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head th:replace="~{fragments/header :: header}"></head>
+
+<body>
+
+<div th:replace="~{fragments/nav :: nav}"></div>
+
+<main>
+    <div layout:fragment="content"></div>
+</main>
+
+<div id="popup" class="overlay">
+    <div class="popup">
+        <h2>Medical Appointments - DERECHOS RESERVADOS</h2>
+        <p>Sitio web no oficial creado por la Escuela de Informática de la UNA, Costa Rica</p>
+        <a href="#" class="cerrar">Cerrar</a>
+    </div>
+</div>
+
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
