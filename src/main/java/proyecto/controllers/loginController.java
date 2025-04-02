@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import proyecto.models.Login;
-import proyecto.models.Medico;
 import proyecto.models.Paciente;
+import proyecto.models.Medico;
 import proyecto.models.Usuario;
 import proyecto.repositories.LoginRepository;
 import proyecto.repositories.MedicoRepository;
@@ -73,30 +73,30 @@ private final MedicoRepository medicoRepository;
 
     @PostMapping("/login")
     public String procesarLogin(@RequestParam String userName, @RequestParam String password, HttpSession session, Model model) {
-        Usuario usuario = usuarioRepository.findByfullNameAndPassword(userName, password);
         Login login = loginRepository.findByUsernameAndPassword(userName, password);
 
-        if (login == null) {
+        /*if (login == null) {
             model.addAttribute("error", "Usuario no encontrado");
             return "login";
         }else if(login.getUsername().equals(userName)){
             return "administrador/admitir";
         }
-        if (usuario == null ) {
-            model.addAttribute("error", "Credenciales incorrectas");
-            return "login";
-        }
-
 
         if (usuario instanceof Medico) {
             return "redirect:/medicoGestion";
         } else if (usuario instanceof Paciente) {
             return "redirect:/pacienteHistorico";
-        }
+        }*/
 
-        model.addAttribute("error", "Tipo de usuario desconocido");
-        return "login";
+        if (login != null) {
+            session.setAttribute("usuario", login);
+            return "medicoGestion";
+        } else {
+            model.addAttribute("error", "Credenciales incorrectas");
+            return "login";
+        }
     }
+
     @GetMapping("/logout")
     public String logout(HttpSession session) {
         session.invalidate();

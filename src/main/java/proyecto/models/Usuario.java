@@ -10,6 +10,7 @@ public abstract class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String userId;
     private String fullName;
     private String email;
     private String phoneNumber;

@@ -11,6 +11,10 @@
                 <li><a th:href="@{/about}">About</a></li>
                 <li><a th:href="@{/search}">Search</a></li>
                 <li><a th:href="@{/login}">Login</a></li>
+                <li th:if="${session.usuario != null}">
+                    <a href="#">Hola, <span th:text="${session.usuario.username}">Usuario</span></a>
+                </li>
+                <li th:if="${session.usuario != null}"><a th:href="@{/logout}">Cerrar sesión</a></li>
             </ul>
         </nav>
 </header>

@@ -9,6 +9,7 @@ public class Medico extends Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String especialidad;
     private Boolean estado;
 
