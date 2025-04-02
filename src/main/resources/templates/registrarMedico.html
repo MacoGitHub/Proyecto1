@@ -4,36 +4,33 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout}">
 
-<section layout:fragment="content" class="formMedico" >
-    <h1 th:if="${mensaje}" th:text="${mensaje}"></h1>
-    <div class="container">
-        <div class="login-box">
+<section layout:fragment="content" class="formMedico">
+    <div>
+        <div>
+            <h1 th:if="${mensaje}" th:text="${mensaje}"></h1>
             <form method="POST" action="/registrarMedico">
-                <label for="id">Cedula:</label>
-                <input type="text" id="id" name="id" required>
+
                 <label for="fullName">Nombre completo:</label>
                 <input type="text" id="fullName" name="fullName" required>
-                <label for="username">Nombre usuario:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="email">Correo electronico:</label>
+
+                <label for="email">Correo electrónico:</label>
                 <input type="email" id="email" name="email" required>
-                <label for="homeAddress">Direccion:</label>
-                <input type="text" id="homeAddress" name="homeAddress" required>
-                <label for="phoneNumber">Telefono:</label>
+
+                <label for="phoneNumber">Teléfono:</label>
                 <input type="text" id="phoneNumber" name="phoneNumber" required>
-                <label for="speciality">Especialidad:</label>
-                <input type="text" id="speciality" name="speciality" required>
-                <label for="workingArea">Area de trabajo que desempeña:</label>
-                <input type="text" id="workingArea" name="workingArea" required>
+
+                <label for="especialidad">Especialidad:</label>
+                <input type="text" id="especialidad" name="especialidad" required>
+
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" required>
-                <label for="confirmpassword">Confirme su contraseña:</label>
-                <input type="password" id="confirmpassword" name="confirmpassword" required>
 
-                <input type="submit" value="Registrar">
+                <label for="confirmPassword">Confirmar contraseña:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <input type="submit" value="Registrar Médico">
             </form>
         </div>
     </div>
 </section>
-
 </html>

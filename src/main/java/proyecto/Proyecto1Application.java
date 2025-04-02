@@ -11,6 +11,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import proyecto.models.Login;
+import proyecto.models.Usuario;
 import proyecto.repositories.LoginRepository;
 
 @SpringBootApplication
@@ -27,6 +28,7 @@ public class Proyecto1Application {
                 admin.setUsername("admin");
                 admin.setPassword("1234");
                 repo.save(admin);
+
             }
         };
     }

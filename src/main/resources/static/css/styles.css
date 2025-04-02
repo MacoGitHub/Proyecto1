@@ -44,6 +44,7 @@ nav ul li a:hover {
 
 .formMedico{
     margin-top: 50px;
+    height: 100vh;
 }
 .formMedico h1{
     text-align: center;
@@ -57,12 +58,11 @@ nav ul li a:hover {
 
 .formMedico input{
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 9px;
 }
 
 
 .loignBtn input{
-
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -78,6 +78,15 @@ footer {
     text-align: center;
 }
 
+.cont{
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+.cont h1{
+    text-align: center;
+    justify-content: center;
+}
 .container{
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -93,16 +102,17 @@ footer {
     width: 300px;
     height: 400px;
     text-align: center;
+    justify-content: center;
 }
 .login-box h2 {
     margin-bottom: 20px;
 }
 .login-box input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .login-box button {
     width: 100%;

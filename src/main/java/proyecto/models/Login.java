@@ -9,7 +9,7 @@ public class Login {
 
     private String username;
     private String password;
-
+    private Boolean admin = false;
     // Getters y setters
     public Long getId() { return id; }
 
@@ -18,4 +18,6 @@ public class Login {
 
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
+
+    public Boolean getAdmin() { return admin;  }
 }

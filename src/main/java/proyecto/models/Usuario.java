@@ -10,15 +10,14 @@ public abstract class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String userId;
     private String fullName;
     private String email;
     private String phoneNumber;
     private String password;
 // ---------------------------------------------------------------------------------------------------------------------
     public Usuario(){}
-    public Usuario(String userId, String fullName, String email, String phoneNumber, String password) {
-        this.userId = userId;
+    public Usuario(String fullName, String email, String phoneNumber, String password) {
+
         this.fullName = fullName;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -26,12 +25,6 @@ public abstract class Usuario {
     }
     public Long getId() {
         return id;
-    }
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-    public String getUserId() {
-        return userId;
     }
     public void setFullName(String fullName) {
         this.fullName = fullName;
