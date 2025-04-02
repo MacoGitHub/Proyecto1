@@ -75,14 +75,7 @@ private final MedicoRepository medicoRepository;
     public String procesarLogin(@RequestParam String userName, @RequestParam String password, HttpSession session, Model model) {
         Login login = loginRepository.findByUsernameAndPassword(userName, password);
 
-        /*if (login == null) {
-            model.addAttribute("error", "Usuario no encontrado");
-            return "login";
-        }else if(login.getUsername().equals(userName)){
-            return "administrador/admitir";
-        }
-
-        if (usuario instanceof Medico) {
+        /*cif (usuario instanceof Medico) {
             return "redirect:/medicoGestion";
         } else if (usuario instanceof Paciente) {
             return "redirect:/pacienteHistorico";
