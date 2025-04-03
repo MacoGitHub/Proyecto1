@@ -36,6 +36,12 @@ private final MedicoRepository medicoRepository;
     }
 
     @GetMapping("/registrarMedico")
+    public String registrarMedico(Model model) {
+        model.addAttribute("mensaje", "Registrando Medico");
+        return "registrarMedico";
+    }
+
+    @PostMapping("/registrarMedico")
     public String registrarMedico(
         @RequestParam String fullName,
         @RequestParam String email,
