@@ -6,5 +6,6 @@ import proyecto.models.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    Usuario findByUserIdAndPassword(String userId, String password);
+   // Usuario findByUserIdAndPassword(String userId, String password);
+    Usuario findByUserNameAndPassword(String userName, String password);
 }

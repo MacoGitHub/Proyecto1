@@ -12,8 +12,8 @@ public class UsuarioService {
         this.usuarioRepository = usuarioRepository;
     }
 
-    public Usuario autenticarUsuario(String userId, String password) {
+   /* public Usuario autenticarUsuario(String userId, String password) {
         return usuarioRepository.findByUserIdAndPassword(userId, password);
-    }
+    }*/
 
 }

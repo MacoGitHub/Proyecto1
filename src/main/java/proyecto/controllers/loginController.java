@@ -80,12 +80,14 @@ private final MedicoRepository medicoRepository;
     @PostMapping("/login")
     public String procesarLogin(@RequestParam String userName, @RequestParam String password, HttpSession session, Model model) {
         Login login = loginRepository.findByUsernameAndPassword(userName, password);
+        Usuario usuario = usuarioRepository.findByUserNameAndPassword(userName, password);
 
-        /*cif (usuario instanceof Medico) {
+        if (usuario instanceof Medico) {
             return "redirect:/medicoGestion";
         } else if (usuario instanceof Paciente) {
+            session.setAttribute("usuario", login);
             return "redirect:/pacienteHistorico";
-        }*/
+        }
 
         if (login != null) {
             session.setAttribute("usuario", login);

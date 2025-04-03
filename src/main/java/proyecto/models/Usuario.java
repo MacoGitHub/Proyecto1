@@ -11,6 +11,7 @@ public abstract class Usuario {
     private Long id;
 
     private String userId;
+    private String userName;
     private String fullName;
     private String email;
     private String phoneNumber;
@@ -18,7 +19,7 @@ public abstract class Usuario {
 // ---------------------------------------------------------------------------------------------------------------------
     public Usuario(){}
     public Usuario(String fullName, String email, String phoneNumber, String password) {
-
+        this.userName = fullName;
         this.fullName = fullName;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -50,5 +51,21 @@ public abstract class Usuario {
     }
     public String getPassword() {
         return password;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }
