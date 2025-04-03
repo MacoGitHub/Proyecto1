@@ -1,6 +1,8 @@
 package proyecto;
 
-/*Estudiantes: Malcom Chaves Obando - Kaleb Baruc
+/*Estudiantes:
+    Malcom Chaves Obando
+    Kaleb Baruc Rojas Gomez
 Grupo 04 - NRC: 41406
 Profesor: Deivert Guiltrichs
 Proyecto 1
